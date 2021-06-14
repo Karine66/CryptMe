@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CryptMe</string>
+    <string name="btn_login">Login</string>
+    <string name="use_biometrics">Use Biometrics</string>
+    <string name="username_hint">Username</string>
+    <string name="password">Password</string>
+</resources>
