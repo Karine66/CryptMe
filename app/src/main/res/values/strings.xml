@@ -4,4 +4,8 @@
     <string name="use_biometrics">Use Biometrics</string>
     <string name="username_hint">Username</string>
     <string name="password">Password</string>
+    <string name="hint_no_message">No Message</string>
+    <string name="hint_unlock">Unlock</string>
+    <string name="decrypt_message">Decrypt Message</string>
+    <string name="parcel_message">parce_message</string>
 </resources>
