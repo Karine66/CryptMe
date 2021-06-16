@@ -7,4 +7,6 @@
     <string name="hint_unlock">Unlock</string>
     <string name="decrypt_message">Decrypt Message</string>
     <string name="parcel_message">parce_message</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
 </resources>

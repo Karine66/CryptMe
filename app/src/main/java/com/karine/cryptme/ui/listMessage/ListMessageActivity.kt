@@ -28,7 +28,7 @@ class ListMessageActivity : AppCompatActivity() {
         showMessageList()
     }
 
-    override fun onItemClick(item: EncryptedMessage, itemView: View) {
+     fun onItemClick(item: EncryptedMessage, itemView: View) {
         val decryptionIntent = (Intent(this, DecryptActivity::class.java))
         decryptionIntent.putExtra(getString(R.string.parcel_message), item)
         startActivity(decryptionIntent)

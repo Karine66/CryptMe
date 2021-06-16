@@ -16,14 +16,17 @@ import com.karine.utils.CryptographyUtil
 import javax.crypto.Cipher
 
 class DecryptActivity : AppCompatActivity(), BiometricAuthListener {
+
     private lateinit var decryptBinding: ActivityDecryptBinding
     var encryptedMessage: EncryptedMessage? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         decryptBinding = ActivityDecryptBinding.inflate(layoutInflater)
         val view = decryptBinding.root
-        setContentView(view)
         encryptedMessage = intent.getParcelableExtra(getString(R.string.parcel_message))
+        setContentView(view)
+
     }
 
     override fun onBiometricAuthenticationSuccess(result: BiometricPrompt.AuthenticationResult) {
@@ -35,6 +38,7 @@ class DecryptActivity : AppCompatActivity(), BiometricAuthListener {
     override fun onBiometricAuthenticationError(errorCode: Int, errorMessage: String) {
         CommonUtils.displayMessage(window.decorView, "Biometric error: $errorMessage")
     }
+    @RequiresApi(Build.VERSION_CODES.M)
     fun onClickDecryptMessage(view: View) {
         showBiometricPromptToDecrypt()
     }
@@ -43,7 +47,7 @@ class DecryptActivity : AppCompatActivity(), BiometricAuthListener {
     private fun showBiometricPromptToDecrypt() {
         encryptedMessage?.initializationVector?.let { it ->
             val cryptoObject = BiometricPrompt.CryptoObject(
-                CryptographyUtil.getInitializedCipherForEncryption(it)
+                CryptographyUtil.getInitializedCipherForDecryption(it)
             )
 
             BiometricUtil.showBiometricPrompt(

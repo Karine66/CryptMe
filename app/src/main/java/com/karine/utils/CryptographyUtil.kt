@@ -58,7 +58,7 @@ object CryptographyUtil {
     }
     //prepare the cipher instance
     @RequiresApi(Build.VERSION_CODES.M)
-    fun getInitializedCipherForEncryption(bytes: ByteArray): Cipher {
+    fun getInitializedCipherForEncryption(): Cipher {
         val cipher = getCipher()
         val secretKey = getOrCreateSecretKey(YOUR_SECRET_KEY_NAME)
         cipher.init(Cipher.ENCRYPT_MODE, secretKey)

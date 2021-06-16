@@ -11,8 +11,9 @@
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="32dp"
         android:onClick="onClickLogin"
-        android:text="@string/btn_login"
+        android:text="Login"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/password" />
@@ -22,21 +23,23 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_margin="32dp"
+        android:drawablePadding="8dp"
         android:drawableStart="@drawable/ic_fingerprint"
         android:onClick="onClickBiometrics"
-        android:text="@string/use_biometrics"
+        android:text="Use Biometric to login"
         android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonLogin" />
+        app:layout_constraintTop_toBottomOf="@id/buttonLogin"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:hint="@string/username_hint"
+        android:layout_margin="32dp"
+        android:hint="@string/username"
+        android:textColorHint="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/guideline" />
@@ -45,8 +48,9 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_margin="32dp"
         android:hint="@string/password"
+        android:textColorHint="@color/black"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -54,6 +58,7 @@
         app:layout_constraintTop_toBottomOf="@id/username" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
         style="@style/TextAppearance.AppCompat.Display3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

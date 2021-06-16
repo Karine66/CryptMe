@@ -20,7 +20,9 @@ class LoginActivity : AppCompatActivity(), BiometricAuthListener {
         super.onCreate(savedInstanceState)
         loginBinding = ActivityLoginBinding.inflate(layoutInflater)
         val view = loginBinding.root
+
         setContentView(view)
+        showBiometricLoginOption()
     }
     fun onClickLogin(view: View) {
         navigateToListActivity()
